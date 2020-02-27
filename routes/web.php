@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/phpinfo', function () {
+    phpinfo();
+ });
+ Route::prefix('/open')->group(function(){
+
+   
+    Route::get('/create','Open@create');
+    Route::post('/store','Open@store');
+});
