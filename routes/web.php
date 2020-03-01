@@ -23,3 +23,9 @@ Route::get('/phpinfo', function () {
     Route::get('/create','Open@create');
     Route::post('/store','Open@store');
 });
+Route::prefix('/user')->group(function(){
+
+   
+    Route::get('/create','User@create');
+    Route::post('/store','User@store');
+});
